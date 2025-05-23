@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Startix Dashboard</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      display: flex;
+      flex-direction: column;
+      height: 100vh;
+      background-color: #0d1117;
+      color: #ffffff;
+    }
+
+    .header {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: linear-gradient(135deg, #1e3c72, #2a5298);
+      color: #ffffff;
+      padding: 20px;
+      font-size: 28px;
+      font-weight: bold;
+      letter-spacing: 2px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+    }
+
+    .container {
+      display: flex;
+      flex: 1;
+    }
+
+    .sidebar {
+      width: 230px;
+      background-color: #1c1f26;
+      padding: 20px;
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      box-shadow: 4px 0 10px rgba(33, 150, 243, 0.2);
+    }
+
+    .sidebar a {
+      color: #81d4fa;
+      text-decoration: none;
+      font-size: 18px;
+      font-weight: bold;
+      padding: 12px;
+      border-radius: 8px;
+      background: linear-gradient(45deg, #273947, #1f2b38);
+      text-align: center;
+      transition: 0.3s ease-in-out;
+    }
+
+    .sidebar a:hover {
+      background: #4fc3f7;
+      color: #000;
+      transform: scale(1.05);
+    }
+
+    .main-content {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+      padding: 30px;
+      flex: 1;
+      background-color: #0f2027;
+    }
+
+    .box {
+      background-color: #203a43;
+      border-radius: 12px;
+      box-shadow: 0 0 15px rgba(129, 212, 250, 0.2);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 18px;
+      font-weight: bold;
+      color: #81d4fa;
+      transition: 0.3s ease-in-out;
+      padding: 20px;
+      text-align: center;
+    }
+
+    .box:hover {
+      background-color: #2c5364;
+      transform: scale(1.05);
+      color: #ffffff;
+    }
+
+    footer {
+      background: #1e3c72;
+      color: #81d4fa;
+      text-align: center;
+      padding: 1rem;
+      font-size: 14px;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="header">Startix Dashboard – Power Your Play</div>
+
+  <div class="container">
+    <div class="sidebar">
+      <a href="index.html">Home</a>
+      <a href="#">Startix Models</a>
+      <a href="#">Gaming Features</a>
+      <a href="#">Tech Specs</a>
+      <a href="#">Reviews</a>
+      <a href="#">Support</a>
+    </div>
+
+    <div class="main-content">
+      <div class="box">Top Gaming Phones</div>
+      <div class="box">Live Game Demos</div>
+      <div class="box">Firmware Updates</div>
+      <div class="box">Performance Benchmarks</div>
+      <div class="box">Compare Devices</div>
+      <div class="box">Startix Community</div>
+    </div>
+  </div>
+
+  <footer>
+    <p>&copy; 2025 Startix. All rights reserved.</p>
+  </footer>
+
+</body>
+</html>

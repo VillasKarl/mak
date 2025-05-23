@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Startix Universe</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: radial-gradient(circle at top, #0a0a23, #000);
+      color: #fff;
+      overflow-x: hidden;
+    }
+
+    header {
+      padding: 40px 20px;
+      text-align: center;
+      background: linear-gradient(to right, #1a1a40, #0f0f1f);
+    }
+
+    header h1 {
+      font-size: 3rem;
+      color: #66fcf1;
+      margin-bottom: 10px;
+    }
+
+    header p {
+      font-size: 1.2rem;
+      color: #cfd8dc;
+    }
+
+    .universe-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 25px;
+      padding: 40px 20px;
+      max-width: 1200px;
+      margin: auto;
+    }
+
+    .universe-card {
+      background: #121212;
+      border-radius: 15px;
+      padding: 20px;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      border: 1px solid #2b2b2b;
+    }
+
+    .universe-card:hover {
+      transform: scale(1.05);
+      box-shadow: 0 0 20px rgba(102, 252, 241, 0.3);
+    }
+
+    .universe-card h3 {
+      color: #66fcf1;
+      margin-bottom: 10px;
+      font-size: 1.4rem;
+    }
+
+    .universe-card p {
+      color: #ccc;
+      font-size: 0.95rem;
+      line-height: 1.5;
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      background: #1a1a40;
+      color: #999;
+      font-size: 0.9rem;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Welcome to the Startix Universe</h1>
+    <p>Explore the ecosystem built for gamers, by gamers. Power. Precision. Performance.</p>
+  </header>
+
+  <section class="universe-grid">
+    <div class="universe-card">
+      <h3>Startix Core</h3>
+      <p>The blazing-fast chipset behind every gamer’s winning edge. Engineered for top-tier mobile performance.</p>
+    </div>
+    <div class="universe-card">
+      <h3>Startix OS</h3>
+      <p>A smooth, lightweight operating system tailored for zero-lag gaming, deep customization, and pro tools.</p>
+    </div>
+    <div class="universe-card">
+      <h3>Startix Hub</h3>
+      <p>All your games, stats, and gear in one smart dashboard. Connect, compete, and conquer.</p>
+    </div>
+    <div class="universe-card">
+      <h3>Startix Shield</h3>
+      <p>Military-grade security for gamers. Block threats, monitor performance, and stay safe on the go.</p>
+    </div>
+  </section>
+
+  <footer>
+    &copy; 2025 Startix Universe — Powered by Gamers Paradise
+  </footer>
+
+</body>
+</html>

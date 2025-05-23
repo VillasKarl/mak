@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Gamers Paradise</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: linear-gradient(to right, #0f2027, #203a43, #2c5364);
+      color: #fff;
+      padding: 20px;
+    }
+
+    /* Navigation */
+    nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background-color: #1c1f26;
+      padding: 15px 30px;
+      border-radius: 10px;
+      box-shadow: 0 0 15px rgba(33, 150, 243, 0.3);
+      margin-bottom: 30px;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: #81d4fa;
+      font-size: 1.2rem;
+      font-weight: bold;
+      padding: 10px 15px;
+      border-radius: 5px;
+      transition: all 0.3s ease-in-out;
+    }
+
+    nav a:hover {
+      background-color: #2196f3;
+      color: #fff;
+      text-shadow: 0 0 5px #81d4fa;
+    }
+
+    /* Modal */
+    .modal {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.85);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      z-index: 9999;
+    }
+
+    .modal-content {
+      background: linear-gradient(135deg, #1e3c72, #2a5298);
+      padding: 2rem;
+      border-radius: 20px;
+      text-align: center;
+      color: white;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
+      animation: popIn 0.4s ease-out;
+    }
+
+    .modal-content h2 {
+      margin-bottom: 10px;
+    }
+
+    .modal-content p {
+      margin-bottom: 20px;
+    }
+
+    .modal-content button {
+      padding: 10px 20px;
+      font-size: 1rem;
+      background-color: #81d4fa;
+      color: #000;
+      border: none;
+      border-radius: 10px;
+      cursor: pointer;
+    }
+
+    .modal-content button:hover {
+      background-color: #4fc3f7;
+    }
+
+    @keyframes popIn {
+      0% {
+        transform: scale(0.6);
+        opacity: 0;
+      }
+      100% {
+        transform: scale(1);
+        opacity: 1;
+      }
+    }
+
+    /* Gallery Container */
+    .gallery-container {
+      background: rgba(255, 255, 255, 0.05);
+      padding: 30px;
+      border-radius: 15px;
+      box-shadow: 0 0 15px rgba(0,0,0,0.4);
+      max-width: 1200px;
+      margin: auto;
+    }
+
+    .gallery-container h2 {
+      margin-bottom: 25px;
+      font-size: 2rem;
+      text-align: center;
+      color: #81d4fa;
+      letter-spacing: 1px;
+    }
+
+    .gallery-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+    }
+
+    .gallery-item, .gallery-grid img {
+      width: 100%;
+      height: 250px;
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+      transition: transform 0.3s ease;
+    }
+
+    .gallery-item:hover, .gallery-grid img:hover {
+      transform: scale(1.05);
+    }
+
+    .gallery-grid img {
+      object-fit: cover;
+    }
+
+    iframe {
+      border: none;
+      width: 100%;
+      height: 100%;
+    }
+
+    @media (max-width: 600px) {
+      nav {
+        flex-direction: column;
+      }
+      nav a {
+        margin: 5px 0;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Welcome Modal -->
+  <div class="modal" id="welcomeModal">
+    <div class="modal-content">
+      <h2>Welcome to Gamer's Paradise</h2>
+      <p>Watch. Play. Conquer.</p>
+      <button id="closeModal">Start Exploring</button>
+    </div>
+  </div>
+
+  <!-- Navigation -->
+  <nav>
+    <a href="index.html">Gamers Paradise</a>
+    <a href="gallery.html">Gallery</a>
+  </nav>
+
+  <!-- Gallery Section -->
+  <div class="gallery-container">
+    <h2>Watch Me</h2>
+    <div class="gallery-grid">
+      <!-- Images -->
+      <img src="Asus-Rog-Phone-9-Series-1 (1).jpg" alt="Gallery Image" />
+      <img src="OIP (1).jpg" alt="Gallery Image" />
+      <img src="Poco-F7-Pro-Price-in-Pakistan.webp" alt="Gallery Image" />
+      <img src="OIP (2).jpg" alt="Gallery Image" />
+
+      <!-- Videos -->
+      <div class="gallery-item">
+        <iframe src="40c47ebe-3969-4466-a55b-60901ca874b8.mp4" allowfullscreen></iframe>
+      </div>
+      <div class="gallery-item">
+        <iframe src="62cbe96f-de01-4b23-aca7-79efecc69437.mp4" allowfullscreen></iframe>
+      </div>
+      <div class="gallery-item">
+        <iframe src="bdad95ea-9a20-40f1-b00c-66a8f7ce6a36.mp4" allowfullscreen></iframe>
+      </div>
+      <div class="gallery-item">
+        <iframe src="ecfebef4-1c02-4f67-8f1e-ed50e065f3b0.mp4" allowfullscreen></iframe>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const modal = document.getElementById("welcomeModal");
+      const closeBtn = document.getElementById("closeModal");
+
+      modal.style.display = "flex";
+
+      closeBtn.addEventListener("click", function () {
+        modal.style.display = "none";
+      });
+    });
+  </script>
+</body>
+</html>
